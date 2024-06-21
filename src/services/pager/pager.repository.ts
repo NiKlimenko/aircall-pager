@@ -36,11 +36,19 @@ export class PagerRepository {
   }
 
   /**
-   * Updates EP for a given service
+   * Updates EP
    * @param escalationPolicy
    */
   async saveEscalationPolicy(escalationPolicy: EscalationPolicy) {
     // Transforms object and saves into DB
+  }
+
+  /**
+   * Deletes EP
+   * @param escalationPolicy
+   */
+  async deleteEscalationPolicy(escalationPolicy: EscalationPolicy) {
+    // Deletes record from DB
   }
 
   /**

@@ -1,7 +1,10 @@
 export class TimerPayload {
   id: string;
   timeMs: number;
-  payload?: {};
+  payload?: {
+    //TODO should be generic
+    message?: string;
+  };
 }
 
 export class TimerService {
