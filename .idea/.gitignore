@@ -1,0 +1,11 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+/aircall-pager.iml
+/aws.xml
+/jsLibraryMappings.xml
+/misc.xml
+/modules.xml
+/vcs.xml

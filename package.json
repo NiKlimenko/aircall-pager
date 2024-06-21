@@ -1,0 +1,22 @@
+{
+  "name": "aircall-pager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha './src/test/**/*.spec.ts' --import=tsx/esm"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.6",
+    "chai": "^5.1.1",
+    "mocha": "^10.4.0",
+    "testdouble": "^3.20.2",
+    "tsx": "^4.15.7",
+    "typescript": "^5.5.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
