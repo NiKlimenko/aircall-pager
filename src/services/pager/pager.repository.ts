@@ -32,7 +32,7 @@ export class PagerRepository {
    */
   async getEscalationPolicy(serviceId: string): Promise<EscalationPolicy> {
     // Get object from DB
-    return new EscalationPolicy();
+    return null;
   }
 
   /**

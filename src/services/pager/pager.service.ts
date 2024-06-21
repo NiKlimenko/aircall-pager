@@ -71,7 +71,7 @@ export class PagerService {
 
     const transaction = async () => {
       await this.repository.saveServiceAlertState(serviceState);
-      await this.escalateServiceOnLevel(serviceState.serviceId, serviceState.elCounter, event.payload.message);
+      await this.escalateServiceOnLevel(serviceState.serviceId, serviceState.elCounter, serviceState.metadata.alertMessage);
     }
 
     // Transaction implementation
@@ -111,6 +111,10 @@ export class PagerService {
    */
   private async escalateServiceOnLevel(serviceId: string, lvl: number, message: string) {
     const escalationPolicy = await this.repository.getEscalationPolicy(serviceId);
+    if (!escalationPolicy) {
+      //TODO: custom Error classes should be used
+      throw new Error(`Escalation Policy not found for service: ${serviceId}`);
+    }
 
     await this.sendNotification(escalationPolicy.levels[lvl], message);
 

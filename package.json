@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "build": "tsc",
     "test": "mocha './src/test/**/*.spec.ts' --import=tsx/esm"
   },
   "devDependencies": {
     "@types/chai": "^4.3.16",
+    "@types/chai-as-promised": "^7.1.8",
     "@types/mocha": "^10.0.6",
     "chai": "^5.1.1",
+    "chai-as-promised": "^8.0.0",
     "mocha": "^10.4.0",
     "testdouble": "^3.20.2",
     "tsx": "^4.15.7",
